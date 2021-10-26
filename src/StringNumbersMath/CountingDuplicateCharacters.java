@@ -81,6 +81,10 @@ public class CountingDuplicateCharacters {
      * @param s
      * @return Map<Character, Long>
      * */
+
+    //Calling codePointAt() instead of charAt(), codePoints() instead of
+    //chars(), and so on helps us to write solutions that cover ASCII and Unicode
+    //characters as well.
     public static Map<Character, Long> countDuplicateCharactersUsingStream(String s) {
         Map<Character, Long> map = s.chars()
                                     .mapToObj(c -> (char) c)
