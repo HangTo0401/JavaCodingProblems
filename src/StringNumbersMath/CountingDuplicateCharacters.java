@@ -36,17 +36,17 @@ public class CountingDuplicateCharacters {
      */
     public static int countingDuplicateCharactersUsingSet(String s) {
         HashSet set = new HashSet();
-        int countDup = 1;
+        int dupCount = 1;
 
         for (int i = 0; i < s.length(); i++) {
             if (!set.contains(s.charAt(i))) {
                 set.add(s.charAt(i));
             } else {
-                countDup++;
+                dupCount++;
             }
         }
 
-        return countDup;
+        return dupCount;
     }
 
     /**
