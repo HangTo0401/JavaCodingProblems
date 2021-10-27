@@ -1,6 +1,8 @@
 package StringNumbersMath;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class FindingFirstNonRepeatedCharacter {
 
@@ -155,6 +157,21 @@ public class FindingFirstNonRepeatedCharacter {
         return firstNonRepeat;
     }
 
+    public static String firstNonRepeatedCharacterUsingFunctionalStyle(String str) {
+        Map<Integer, Long> chs = str.codePoints()
+                .mapToObj(cp -> cp)
+                .collect(Collectors.groupingBy(Function.identity(),
+                        LinkedHashMap::new, Collectors.counting()));
+
+        int cp = chs.entrySet().stream()
+                .filter(e -> e.getValue() == 1L)
+                .findFirst()
+                .map(Map.Entry::getKey)
+                .orElse(Integer.valueOf(Character.MIN_VALUE));
+
+        return String.valueOf(Character.toChars(cp));
+    }
+
     public static void main(String[] args) {
         FindingFirstNonRepeatedCharacter solution = new FindingFirstNonRepeatedCharacter();
         // Single Traversal
@@ -166,6 +183,7 @@ public class FindingFirstNonRepeatedCharacter {
         // Using Hashmap or LinkedHashMap
         System.out.println(solution.findFirstNonRepeatedCharacterUsingStream("dsadssre"));
         System.out.println(solution.findFirstNonRepeatedCharacterUsingLinkedHashMap("dsadssre"));
+        System.out.println(solution.firstNonRepeatedCharacterUsingFunctionalStyle("dsadssre"));
 
         System.out.println("========");
         // Single Traversal
@@ -177,5 +195,6 @@ public class FindingFirstNonRepeatedCharacter {
         // Using Hashmap or LinkedHashMap
         System.out.println(solution.findFirstNonRepeatedCharacterUsingStream("iooightk"));
         System.out.println(solution.findFirstNonRepeatedCharacterUsingLinkedHashMap("iooightk"));
+        System.out.println(solution.firstNonRepeatedCharacterUsingFunctionalStyle("iooightk"));
     }
 }
