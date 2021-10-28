@@ -26,10 +26,10 @@ public class CountingDuplicateCharacters {
      * */
 
     /**
-     *  1. The first solution iterates the string characters and uses Set to store the
-     *  characters. If the current character was never added to Set, then add it to Set
-     *  If the current character exists in Set, then simply increase countDup variable
-     *  This is shown in the following code:
+     * 1. The first solution iterates the string characters and uses Set to store the
+     * characters. If the current character was never added to Set, then add it to Set
+     * If the current character exists in Set, then simply increase countDup variable
+     * This is shown in the following code:
      *
      * @param s
      * @return int

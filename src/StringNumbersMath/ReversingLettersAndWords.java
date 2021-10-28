@@ -8,7 +8,7 @@ public class ReversingLettersAndWords {
      * String Manipulation
      * 1.3 Reversing Letters And Words
      *
-     * SOLUTION: There are 2 problems
+     * SOLUTION: There are 2 solutions to this problem
      * */
 
     private static final String WHITESPACE = " ";
