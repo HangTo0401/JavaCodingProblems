@@ -14,7 +14,8 @@ public class CheckingWhetherStringContainsOnlyDigits {
      * The solution relying on Character.isDigit() is pretty simple
      * and fast—loop the string characters
      * Then break the loop if this method returns false
-     *
+     * This is shown in the following code:
+     * 
      * @param str
      * @return boolean
      */
@@ -28,7 +29,9 @@ public class CheckingWhetherStringContainsOnlyDigits {
     }
 
     /**
-     * 2. The second solution to this problem is using String.matches() method
+     * 2. The second solution is using String.matches() method
+     * with parameter is regex that accept digits only
+     * This is shown in the following code:
      *
      * @param str
      * @return boolean
