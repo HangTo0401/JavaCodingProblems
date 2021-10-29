@@ -7,6 +7,15 @@ public class CheckingWhetherStringContainsOnlyDigits {
      * 1.4  Checking whether a string contains only digits
      *
      * SOLUTION: There are 2 solutions to this problem
+     *
+     * Avoid solving this problem via parseInt() or parseLong()
+     * First of all, it's bad practice to catch NumberFormatException
+     * and take business logic decisions in the catch block.
+     *
+     * Second, these methods verify whether the string is a valid number,
+     * not whether it contains only digits (for example, -4 is valid)
+     * For third-party library support, please consider the Apache Commons Lang,
+     * StringUtils.isNumeric()
      */
 
     /**
