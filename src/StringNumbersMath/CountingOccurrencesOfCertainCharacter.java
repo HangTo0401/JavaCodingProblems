@@ -6,7 +6,7 @@ public class CountingOccurrencesOfCertainCharacter {
      * String Manipulation
      * 1.6 Counting Occurrences Of A Certain Character
      *
-     * SOLUTION: There are 3 solutions to this problem
+     * SOLUTION: There are 4 solutions to this problem
      */
 
     /**
@@ -32,8 +32,9 @@ public class CountingOccurrencesOfCertainCharacter {
      * 2. The second solution covers Unicode surrogate pairs as well
      * The code for this method is as follows:
      *
-     * @param
-     * @return
+     * @param str
+     * @param ch
+     * @return int
      * */
     public static int countOccurrencesOfACertainCharacterCoverUnicode(String str, String ch) {
         // codePointCount() returns the number of Unicode code points in the specified text range of this String.
@@ -50,14 +51,15 @@ public class CountingOccurrencesOfCertainCharacter {
     }
 
     /**
-     * 3. The final solution is fast solution consists of
+     * 3. The third solution is fast solution consists of
      * looping the string characters (a single traversal)
      * and comparing each character with the given character
      * Increase the counter by one for every match:
      * The code for this method is as follows:
      *
-     * @param
-     * @return
+     * @param str
+     * @param ch
+     * @return int
      * */
     public static int countOccurrencesOfACertainCharacterSingleTraversal(String str, char ch) {
         int count = 0;
@@ -71,11 +73,31 @@ public class CountingOccurrencesOfCertainCharacter {
         return count;
     }
 
+    /**
+     * The final solution that covers the Unicode surrogate pairs is in the code that's
+     * bundled with this book
+     * In Java 8 functional style, one solution consists of using filter() or reduce()
+     * For example, using filter() will result in the following code
+     * The solution that covers the Unicode surrogate pairs is in the code that's
+     * bundled with this book
+     * The code for this method is as follows:
+     *
+     * @param str
+     * @param ch
+     * @return long
+     */
+    public static long countOccurrencesOfACertainCharacterUsingJavaStream(String str, char ch) {
+        return str.chars()
+                .filter(c -> c == ch)
+                .count();
+    }
+
     public static void main(String[] args) {
         CountingOccurrencesOfCertainCharacter solution = new CountingOccurrencesOfCertainCharacter();
 
         System.out.println(solution.countOccurrencesOfACertainCharacter("HOW ARE YOU HOW CAN YOU HOW DARE YOU", 'H'));
         System.out.println(solution.countOccurrencesOfACertainCharacterCoverUnicode("HOW ARE YOU HOW CAN YOU HOW DARE YOU", "H"));
         System.out.println(solution.countOccurrencesOfACertainCharacterSingleTraversal("HOW ARE YOU HOW CAN YOU HOW DARE YOU", 'H'));
+        System.out.println(solution.countOccurrencesOfACertainCharacterUsingJavaStream("HOW ARE YOU HOW CAN YOU HOW DARE YOU", 'H'));
     }
 }
