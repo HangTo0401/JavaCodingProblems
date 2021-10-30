@@ -2,6 +2,7 @@ package StringNumbersMath;
 
 public class ConvertingString {
     /**
+     * String Manipulation
      * 1.7  Converting a string into an int, long, float, double
      *
      * SOLUTIONS: There are 2 solutions to this problem
