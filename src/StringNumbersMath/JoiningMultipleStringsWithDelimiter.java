@@ -8,7 +8,7 @@ public class JoiningMultipleStringsWithDelimiter {
 
     /**
      * String Manipulation
-     * 1.9  Joining Multiple Strings With Delimiter
+     * 1.9 Joining Multiple Strings With Delimiter
      *
      * SOLUTIONS: There are 5 solutions to this problem
      *
