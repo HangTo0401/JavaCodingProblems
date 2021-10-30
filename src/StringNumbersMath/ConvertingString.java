@@ -3,15 +3,21 @@ package StringNumbersMath;
 public class ConvertingString {
     /**
      * String Manipulation
-     * 1.7  Converting a string into an int, long, float, double
+     * 1.7 Converting a string into an int, long, float, double
      *
      * SOLUTIONS: There are 2 solutions to this problem
      */
 
     /**
-     * When a String cannot be converted successfully,
-     * Java throws a NumberFormatException exception
-     * The following code speaks for itself:
+     * 1. The first solution is when a String cannot be converted successfully,
+     * Java throws a NumberFormatException exception so that we use Object
+     * This is shown in the following code:
+     *
+     * @param TO_INT
+     * @param TO_LONG
+     * @param TO_FLOAT
+     * @param TO_DOUBLE
+     * @param WRONG_NUMBER
      */
     public void convertStringToObject(String TO_INT, String TO_LONG, String TO_FLOAT, String TO_DOUBLE, String WRONG_NUMBER) {
 
@@ -41,6 +47,17 @@ public class ConvertingString {
         }
     }
 
+    /**
+     * 2. The second solution is when a String cannot be converted successfully,
+     * Java throws a NumberFormatException exception so that we use Primitive Type
+     * This is shown in the following code:
+     *
+     * @param TO_INT
+     * @param TO_LONG
+     * @param TO_FLOAT
+     * @param TO_DOUBLE
+     * @param WRONG_NUMBER
+     */
     public void convertStringToPrimitive(String TO_INT, String TO_LONG, String TO_FLOAT, String TO_DOUBLE, String WRONG_NUMBER) {
 
         try {
@@ -66,7 +83,11 @@ public class ConvertingString {
 
     public static void main(String[] args) {
         ConvertingString solution = new ConvertingString();
+
+        // C1
         solution.convertStringToObject("453", "45234223233", "45.823F", "13.83423D", "452w");
+
+        // C2
         solution.convertStringToPrimitive("453", "45234223233", "45.823F", "13.83423D", "452w");
     }
 }
