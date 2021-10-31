@@ -20,6 +20,9 @@ public class RemovingWhiteSpacesFromString {
      * 1. The solution to this problem consists of using the String.replaceAll()
      * method with the \s regular expression. Mainly, \s removes all white spaces,
      * including the non-visible ones, such as \t, \n, and \r:
+     * This is shown in the following code:
+     *
+     * @param str
      * */
     public static String removeWhitespaces(String str) {
         return str.replaceAll("\\s", "");
