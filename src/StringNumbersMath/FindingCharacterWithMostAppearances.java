@@ -38,6 +38,10 @@ public class FindingCharacterWithMostAppearances {
      * character with the most appearances and the number of appearances (notice
      * that the white spaces are ignored). If you don't prefer to have this extra class,
      * that is, Pair, then just rely on Map.Entry<K, V>:
+     * This is shown in the following code:
+     *
+     * @param str
+     * @return Pair<Character, Integer>
      * */
     public static Pair<Character, Integer> maxOccurenceCharacter(String str) {
         Map<Character, Integer> map = new HashMap();
@@ -77,6 +81,10 @@ public class FindingCharacterWithMostAppearances {
      * Furthermore, this solution loops the characters of the given string
      * and keeps track of the number of appearances for each
      * character by increasing the corresponding index in this array:
+     * This is shown in the following code:
+     *
+     * @param str
+     * @return Pair<Character, Integer>
      * */
     private static final int EXTENDED_ASCII_CODES = 256;
     public static Pair<Character, Integer> maxOccurenceCharacterUsingArray(String str) {
@@ -113,6 +121,10 @@ public class FindingCharacterWithMostAppearances {
      * Since max() is a terminal operation, the solution may return
      * Optional<Entry<Character, Long>>, but this solution adds an extra step and
      * maps this entry to Pair<Character, Long>.
+     * This is shown in the following code:
+     *
+     * @param str
+     * @return Pair<Character, Long>
      * */
     public static Pair<Character, Long> maxOccurenceCharacterUsingJavaStream(String str) {
         return str.chars()
