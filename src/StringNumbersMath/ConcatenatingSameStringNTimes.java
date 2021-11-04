@@ -9,7 +9,7 @@ public class ConcatenatingSameStringNTimes {
      * String Manipulation
      * 1.20 Concatenating Same String N Times
      *
-     * SOLUTIONS: There are sixth solutions to this problem
+     * SOLUTIONS: There are 6 solutions to this problem
      * */
 
     /**
