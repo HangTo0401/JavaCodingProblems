@@ -16,7 +16,7 @@ public class RemovingLeadingAndTrailingSpaces {
      *
      * The preceding snippet of code will work as expected.
      * The trimmed string will be hello.
-     * This only works because all of the white spaces that are being used
+     * This only works because all the white spaces that are being used
      * are less than U+0020 or 32 (the space character).
      *
      * There are 25 characters
