@@ -168,6 +168,33 @@ public class FindingLongestCommonPrefix {
         return sb.toString();
     }
 
+    /**
+     * 5. The fifth solution use Horizontal scanning
+     * The algorithm iterates through the strings [S1…Sn],
+     * finding at each iteration i the longest common prefix of strings LCP(S1...Si).
+     * When LCP(S1...Si) is an empty string, the algorithm ends.
+     * Otherwise, after n iterations, the algorithm returns LCP(S1...Sn).
+     * This is shown in the following code:
+     *
+     * @param strs
+     * @return String
+     * */
+    public String findingLongestCommonPrefixUsingHorizontalScanning(String[] strs) {
+        if (strs.length == 0) return "";
+        String prefix = strs[0];
+
+        for (int i = 1; i < strs.length; i++) {
+            // If strs[i].indexOf(prefix) = 0 means that strs[i] contains prefix
+            while (strs[i].indexOf(prefix) != 0) {
+                /* Remove one character in prefix */
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.isEmpty()) return "";
+            }
+        }
+
+        return prefix;
+    }
+
     public static void main(String[] args) {
         FindingLongestCommonPrefix solution = new FindingLongestCommonPrefix();
         String[] texts = {"abc", "abcd", "abcde", "ab", "abcd", "abcdef"};
@@ -176,9 +203,12 @@ public class FindingLongestCommonPrefix {
         System.out.println(solution.findingLongestCommonPrefixUsingCompare(texts));
 
         // C2
-        System.out.println(solution.findingLongestCommonPrefixUsingSorting(texts));
+//        System.out.println(solution.findingLongestCommonPrefixUsingSorting(texts));
 
         // C3
         System.out.println(solution.findingLongestCommonPrefixUsingTwoPointer(texts));
+
+        // C4
+        System.out.println(solution.findingLongestCommonPrefixUsingHorizontalScanning(texts));
     }
 }
