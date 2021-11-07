@@ -61,7 +61,7 @@ public class StringAsUnsignedNumberInRadix {
 
     public static void main(String[] args) {
         StringAsUnsignedNumberInRadix solution = new StringAsUnsignedNumberInRadix();
-        
+
         System.out.println(solution.parseUnsigned("25550"));
         System.out.println(solution.parseUnsignedInt("25550"));
     }
