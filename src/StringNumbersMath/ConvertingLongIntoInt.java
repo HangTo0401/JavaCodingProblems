@@ -42,8 +42,12 @@ public class ConvertingLongIntoInt {
      * in case long longInt = Long.MAX_VALUE;
      * In order to avoid such results, we use Math.toIntExact() in JDK 8
      * This method gets an argument of the long type
-     * and tries to convert it into int. If the obtained value overflows int,
-     * then this method will throw ArithmeticException:
+     * and tries to convert it into int.
+     *
+     * If the obtained value overflows int,
+     * then this method will throw ArithmeticException
+     * Behind the scenes, toIntExact() relies on the ((int)value != value)
+     * condition.
      * This is shown in the following code:
      *
      * @return int
