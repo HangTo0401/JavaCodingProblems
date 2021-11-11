@@ -184,7 +184,7 @@ public class CheckingNullReferencesInFunctionalStyle {
     public static void main(String[] args) {
         CheckingNullReferencesInFunctionalStyle solution = new CheckingNullReferencesInFunctionalStyle();
         List<Integer> numbers  = Arrays.asList(1, 2, null, 4, null, 16, 7, null);
-        
+
         // C1A
         List<Integer> result = solution.evenIntegers(numbers);
         result.stream().forEach(System.out::println);
