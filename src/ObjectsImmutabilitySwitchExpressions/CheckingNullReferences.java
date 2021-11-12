@@ -14,7 +14,7 @@ public class CheckingNullReferences {
      * and throwing the specified exception
      * (for example, IllegalArgumentException),
      * addresses the IllegalArgumentException approach.
-     * 
+     *
      * SOLUTIONS: There are 3 solutions to this problem
      * */
 
