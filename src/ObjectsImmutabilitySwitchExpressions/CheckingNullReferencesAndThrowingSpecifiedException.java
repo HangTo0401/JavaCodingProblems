@@ -109,7 +109,7 @@ public class CheckingNullReferencesAndThrowingSpecifiedException {
 
         // C2
         solution.requireNonNullElseThrowIAEUsingSupplier("hello", () -> "Name cannot be set as null");
-        
+
         // C3
         solution.requireNonNullElseThrowUsingException("hello", new UnsupportedOperationException("Name cannot be set as null"));
 
