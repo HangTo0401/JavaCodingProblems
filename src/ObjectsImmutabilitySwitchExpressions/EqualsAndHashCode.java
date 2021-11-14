@@ -7,7 +7,7 @@ import java.util.Set;
 public class EqualsAndHashCode {
     /**
      * Objects Immutability Switch Expressions
-     * 1.45 equals() and hashCode()
+     * 1.46 equals() and hashCode()
      *
      * The equals() and hashCode() methods are defined in java.lang.Object.
      * Since Object is the superclass of all Java objects,
@@ -63,7 +63,61 @@ public class EqualsAndHashCode {
      * whereas equals() compares object values
      * (as humans, this is what we care about).
      *
-     * SOLUTIONS: There are 2 solutions to this problem
+     * SOLUTIONS: There are 1 solution to this problem
+     * */
+
+    /**
+     * Common mistakes of working with equals() and hashCode():
+     * You override equals() and forget to override hashCode() or vice
+     * versa (override both or none).
+     *
+     * You use the == operator instead of equals() for comparing object
+     * values.
+     *
+     * In equals(), you omit one or more of the following:
+     * Start by adding the self-check (if (this == obj)...).
+     * Since no instance should be equal to null, continue by
+     * adding null-check (if(obj == null)...).
+     *
+     * Ensure that the instance is what we are expecting (use
+     * getClass() or instanceof).
+     *
+     * Finally, after these corner-cases, add field
+     * comparisons.
+     *
+     * You violate equals() symmetry via inheritance.
+     *
+     * Assume a class A and a class B extending A and adding a new field.
+     *
+     * The B class overrides the equals() implementation inherited from A,
+     * and this implementation is added to the new field.
+     *
+     * Relying on instanceof will reveal that
+     * b.equals(a) will return false (as expected),
+     * but a.equals(b) will return true (not expected),
+     * so symmetry is broken.
+     *
+     * Relying on slice comparison will not work
+     * since this breaks transitivity and reflexivity.
+     *
+     * Fixing the problem means relying on getClass()
+     * instead of instanceof
+     * (via getClass(), instances of the type and its subtypes cannot be equal),
+     * or better relying on composition instead of inheritance as in the application
+     * bundled to this book (P46_ViolateEqualsViaSymmetry).
+     *
+     * Since JDK 7, the Objects class has come with several helpers for dealing with
+     * object equality and hash codes, as follows
+     *
+     * Objects.equals(Object a, Object b): Tests whether the a object is
+     * equal to the b object.
+     *
+     * Objects.deepEquals(Object a, Object b): Useful for testing
+     * whether two objects are equal (if they are arrays, the test is
+     * performed via Arrays.deepEquals()).
+     *
+     * Objects.hash(Object ... values): Generates a hash code for a
+     * sequence of input values.
      * */
 
     private int id;

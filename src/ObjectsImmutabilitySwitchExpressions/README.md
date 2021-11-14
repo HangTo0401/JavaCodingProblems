@@ -43,7 +43,7 @@ length: Write a program that checks whether the given subrange
 given length]. If the given subrange is not in the [0, given
 length] range, then throw IndexOutOfBoundsException.
 46. equals() and hashCode(): Explain and exemplify how equals()
-and hashCode() methods work in Java.
+and hashCode() methods work in Java. (MUST READ)
 47. Immutable objects in a nutshell: Explain and exemplify
 what is an immutable object in Java.
 48. Immutable string: Explain why the String class is immutable.
