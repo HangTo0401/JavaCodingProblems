@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class CheckingIndexInRangeZeroToLength {
     /**
+     * Objects Immutability Switch Expressions
      * 1.44 Checking the index in the range from 0 to length
      *
      * Notice that the preceding snippet of code doesn't assume any range
