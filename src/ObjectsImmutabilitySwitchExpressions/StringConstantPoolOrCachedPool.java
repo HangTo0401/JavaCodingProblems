@@ -38,5 +38,30 @@ public class StringConstantPoolOrCachedPool {
      * "book", String z = "book"), then the new variable will point to
      * the String object (basically, all variables that have the same value
      * will point to the same String object):
+     *
+     * But x should be "cook" and not "book", so let's replace "b" with "c"—x =
+     * x.replace("b", "c");.
+     * While x should be "cook", y and z should remain unchanged. This behavior is
+     * provided by immutability. Java will create a new object and will perform the
+     * change on it as follows:
+     *
+     * So, string immutability permits the caching of string literals,
+     * which allows applications to use a large number of
+     * string literals with a minimum impact
+     * on the heap memory and garbage collector.
+     *
+     * In a mutable context, a modification of a string literal
+     * may lead to corrupted variables.
+     * Do not create a string as String x = new String("book").
+     * This is not a string literal;
+     *
+     * This is a String instance (built via a constructor)
+     * that will go in the normal memory heap instead of the SCP.
+     * A string created in the normal heap memory can point to the SCP
+     * by explicitly calling the String.intern() method as x.intern().
      * */
+
+    public static void main(String[] args) {
+        StringConstantPoolOrCachedPool solution = new StringConstantPoolOrCachedPool();
+    }
 }
