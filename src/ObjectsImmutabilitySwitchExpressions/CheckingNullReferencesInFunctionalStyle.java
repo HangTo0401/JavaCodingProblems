@@ -6,7 +6,7 @@ public class CheckingNullReferencesInFunctionalStyle {
 
     /**
      * Objects Immutability Switch Expressions
-     * 1.40 Checking null references in functional style
+     * 40. Checking null references in functional style
      * and imperative code
      *
      * Independent of functional style or imperative code,

@@ -7,7 +7,7 @@ public class CheckingNullReferences {
 
     /**
      * Objects Immutability Switch Expressions
-     * 1.41 Checking null references and throwing customized
+     * 41. Checking null references and throwing customized
      * NullPointerException
      *
      * The next problem, checking null references

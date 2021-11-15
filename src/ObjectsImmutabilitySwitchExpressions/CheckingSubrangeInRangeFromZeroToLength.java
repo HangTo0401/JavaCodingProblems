@@ -4,7 +4,8 @@ import java.util.Objects;
 
 public class CheckingSubrangeInRangeFromZeroToLength {
     /**
-     * 1.45 Checking the subrange in the range from 0 to length
+     * Objects Immutability Switch Expressions
+     * 45. Checking the subrange in the range from 0 to length
      *
      * Let's follow the same flow from the previous problem. So, this time, the
      * Function class will look as follows:

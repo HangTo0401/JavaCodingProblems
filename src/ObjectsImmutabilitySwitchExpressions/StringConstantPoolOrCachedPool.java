@@ -2,7 +2,8 @@ package ObjectsImmutabilitySwitchExpressions;
 
 public class StringConstantPoolOrCachedPool {
     /**
-     * 1.49 String constant pool or cached pool
+     * Objects Immutability Switch Expressions
+     * Another knowledge: String constant pool or cached pool
      *
      * One of the reasons in favor of string immutability
      * is represented by the string constant pool (SCP) or cached pool.

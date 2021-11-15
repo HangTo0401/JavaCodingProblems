@@ -6,7 +6,7 @@ import java.util.Objects;
 public class CheckingNullReferencesAndReturningNonNullDefaultReferences {
     /**
      * Objects Immutability Switch Expressions
-     * 1.43 Checking null references and returning non-null default references
+     * 43. Checking null references and returning non-null default references
      *
      * SOLUTIONS: There are 2 solutions to this problem
      * */

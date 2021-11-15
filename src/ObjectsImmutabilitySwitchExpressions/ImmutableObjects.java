@@ -2,7 +2,8 @@ package ObjectsImmutabilitySwitchExpressions;
 
 public class ImmutableObjects {
     /**
-     * 1.47 Immutable objects in a nutshell
+     * Objects Immutability Switch Expressions
+     * 47. Immutable objects in a nutshell
      *
      * An immutable object is an object that
      * cannot be changed (its state is fixed) once it is created.

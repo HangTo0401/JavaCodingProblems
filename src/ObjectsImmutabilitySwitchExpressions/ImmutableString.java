@@ -2,7 +2,8 @@ package ObjectsImmutabilitySwitchExpressions;
 
 public class ImmutableString {
     /**
-     * 1.48 Immutable String
+     * Objects Immutability Switch Expressions
+     * 48. Immutable String
      * Every programming language has a way of representing strings.
      *
      * As primitive types, strings are part of the predefined types,

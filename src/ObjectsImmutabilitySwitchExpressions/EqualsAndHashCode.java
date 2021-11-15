@@ -7,7 +7,7 @@ import java.util.Set;
 public class EqualsAndHashCode {
     /**
      * Objects Immutability Switch Expressions
-     * 1.46 equals() and hashCode()
+     * 46. equals() and hashCode()
      *
      * The equals() and hashCode() methods are defined in java.lang.Object.
      * Since Object is the superclass of all Java objects,

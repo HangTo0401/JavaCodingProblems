@@ -4,7 +4,8 @@ import java.lang.reflect.Field;
 
 public class IsStringCompletelyImmutable {
     /**
-     * Is String completely immutable?
+     * Objects Immutability Switch Expressions
+     * Another question: Is String completely immutable?
      * String uses private final char[] to store each
      * character of the string.
      *

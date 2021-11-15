@@ -5,7 +5,8 @@ import java.util.function.Supplier;
 public class CheckingNullReferencesAndThrowingSpecifiedException {
 
     /**
-     * 1.42 CheckingNullReferences And Throwing Specified Exception
+     * Objects Immutability Switch Expressions
+     * 42. CheckingNullReferences And Throwing Specified Exception
      *
      * SOLUTIONS: There are 2 solutions to this problem
      * */
