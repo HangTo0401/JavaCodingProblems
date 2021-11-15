@@ -3,47 +3,97 @@
 
 # Table of Contents
 **1. Strings, Numbers, and Math**<br>
-   1.1 Counting duplicate characters<br>
-   1.2 Finding the first non-repeated character<br>
-   1.3 Reversing letters and words<br>
-   1.4 Checking whether a string contains only digits<br>
-   1.5 Counting vowels and consonants<br>
-   1.6 Counting the occurrences of a certain character<br>
-   1.7 Converting a string into an int, long, float or double<br>
-   1.8 Removing white spaces from a string<br>
-   1.9 Joining multiple strings with a delimiter<br>
-   1.10 Generating all permutations (**MUST READ**)<br>
-   1.11 Checking whether a string is a palindrome<br>
-   1.12 Removing duplicate characters<br>
-   1.13 Removing a given character<br>
-   1.14 Finding the character with the most appearances<br>
-   1.15 Sorting an array of strings by length<br>
-   1.16 Sorting an array of strings by length<br>
-   1.17 Counting substring occurrences in a string<br>
-   1.18 Checking whether two strings are anagrams<br>
-   1.19 Declaring multiline strings (text blocks)<br>
-   1.20 Concatenating the same string n times<br>
-   1.21 Removing leading and trailing spaces<br>
-   1.22 Finding the longest common prefix<br>
-   1.23 Finding the longest common prefix<br>
-   1.24 Transforming strings<br>
-   1.25 Computing the minimum and maximum of two numbers<br>
-   1.26 Summing two large int/long values and operation overflow<br>
-   1.27 String as an unsigned number in the radix<br>
-   1.28 Converting into a number by an unsigned conversion<br>
-   1.29 Comparing two unsigned numbers<br>
-   1.30 Division and modulo of unsigned values<br>
-   1.31 Double/float is a finite floating-point value<br>
-   1.32 Applying logical AND/OR/XOR to two boolean expressions<br>
-   1.33 Converting BigInteger into a primitive type<br>
-   1.34 Converting long into int<br>
-   1.35  Computing the floor of a division and modulus<br>
-   1.36 Next floating-point value<br>
-   1.37 Multiplying two large int/long values and operation overflow<br>
-   1.38 Fused Multiply Add<br>
-   1.39 Compact number formatting<br>
+    1 Counting duplicate characters<br>
+    2 Finding the first non-repeated character<br>
+    3 Reversing letters and words<br>
+    4 Checking whether a string contains only digits<br>
+    5 Counting vowels and consonants<br>
+    6 Counting the occurrences of a certain character<br>
+    7 Converting a string into an int, long, float or double<br>
+    8 Removing white spaces from a string<br>
+    9 Joining multiple strings with a delimiter<br>
+    10 Generating all permutations (**MUST READ**)<br>
+    11 Checking whether a string is a palindrome<br>
+    12 Removing duplicate characters<br>
+    13 Removing a given character<br>
+    14 Finding the character with the most appearances<br>
+    15 Sorting an array of strings by length<br>
+    16 Sorting an array of strings by length<br>
+    17 Counting substring occurrences in a string<br>
+    18 Checking whether two strings are anagrams<br>
+    19 Declaring multiline strings (text blocks)<br>
+    20 Concatenating the same string n times<br>
+    21 Removing leading and trailing spaces<br>
+    22 Finding the longest common prefix<br>
+    23 Finding the longest common prefix<br>
+    24 Transforming strings<br>
+    25 Computing the minimum and maximum of two numbers<br>
+    26 Summing two large int/long values and operation overflow<br>
+    27 String as an unsigned number in the radix<br>
+    28 Converting into a number by an unsigned conversion<br>
+    29 Comparing two unsigned numbers<br>
+    30 Division and modulo of unsigned values<br>
+    31 Double/float is a finite floating-point value<br>
+    32 Applying logical AND/OR/XOR to two boolean expressions<br>
+    33 Converting BigInteger into a primitive type<br>
+    34 Converting long into int<br>
+    35  Computing the floor of a division and modulus<br>
+    36 Next floating-point value<br>
+    37 Multiplying two large int/long values and operation overflow<br>
+    38 Fused Multiply Add<br>
+    39 Compact number formatting<br>
    
 **2. Objects, Immutability, and Switch Expressions**<br>
+   40. Checking null references in functional style<br>
+   and imperative code: Write a program that performs the null<br>
+   checks on the given references in a functional style and imperative code.<br>
+   41. Checking null references and throwing a customized<br>
+   NullPointerException error: Write a program that performs<br>
+   the null checks on the given references and throws<br>
+   NullPointerException with custom messages.<br>
+   42. Checking null references and throwing the specified<br>
+   exception (example, IllegalArgumentException): Write a<br>
+   program that performs the null checks on the given references<br>
+   and throws the specified exception.<br>
+   43. Checking null references and returning non-null default<br>
+   references: Write a program that performs the null checks on<br>
+   the given reference, and if it is non-null, then return it; otherwise,<br>
+   return a non-null default reference.<br>
+   44. Checking the index in the range from 0 to length: Write a
+   program that checks whether the given index is between 0
+   (inclusive) and the given length (exclusive). If the given index is
+   out of the [0, given length] range, then
+   throw IndexOutOfBoundsException.
+   45. Checking the subrange in the range from 0 to
+   length: Write a program that checks whether the given subrange
+   [given start, given end] is within the bounds of the range from [0,
+   given length]. If the given subrange is not in the [0, given
+   length] range, then throw IndexOutOfBoundsException.
+   46. equals() and hashCode(): Explain and exemplify how equals()
+   and hashCode() methods work in Java. (MUST READ)
+   47. Immutable objects in a nutshell: Explain and exemplify
+   what is an immutable object in Java.
+   48. Immutable string: Explain why the String class is immutable.
+   49. Writing an immutable class: Write a program that represents
+   an immutable class.
+   50. Passing/returning mutable objects to/from an
+   immutable class: Write a program that passes and returns a
+   mutable object to/from an immutable class.
+   51. Writing an immutable class via the Builder
+   pattern: Write a program that represents an implementation of
+   the Builder pattern in an immutable class.
+   52. Avoiding bad data in immutable objects: Write a program
+   that prevents bad data in immutable objects.
+   53. Cloning objects: Write a program that exemplifies shallow and
+   deep cloning techniques.
+   54. Overriding toString(): Explain and exemplify practices for
+   overriding toString().
+   55. switch expressions: Provide a brief overview of the switch
+   expressions in JDK 12.
+   56. Multiple case labels: Write a snippet of code for exemplifying
+   the JDK 12 switch with multiple case labels.
+   57. Statement blocks: Write a snippet of code for exemplifying the
+   JDK 12 switch with case labels that point to a curly-braced block.
 **3. Working with Date and Time**<br>
 **4. Type Inference**<br>
 **5. Arrays, Collections, and Data Structures**<br>
