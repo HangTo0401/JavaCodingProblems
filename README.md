@@ -44,56 +44,36 @@
     39 Compact number formatting<br>
    
 **2. Objects, Immutability, and Switch Expressions**<br>
-   40. Checking null references in functional style<br>
-   and imperative code: Write a program that performs the null<br>
-   checks on the given references in a functional style and imperative code.<br>
-   41. Checking null references and throwing a customized<br>
-   NullPointerException error: Write a program that performs<br>
-   the null checks on the given references and throws<br>
-   NullPointerException with custom messages.<br>
-   42. Checking null references and throwing the specified<br>
-   exception (example, IllegalArgumentException): Write a<br>
-   program that performs the null checks on the given references<br>
-   and throws the specified exception.<br>
-   43. Checking null references and returning non-null default<br>
-   references: Write a program that performs the null checks on<br>
-   the given reference, and if it is non-null, then return it; otherwise,<br>
-   return a non-null default reference.<br>
-   44. Checking the index in the range from 0 to length: Write a
-   program that checks whether the given index is between 0
-   (inclusive) and the given length (exclusive). If the given index is
-   out of the [0, given length] range, then
-   throw IndexOutOfBoundsException.
-   45. Checking the subrange in the range from 0 to
-   length: Write a program that checks whether the given subrange
-   [given start, given end] is within the bounds of the range from [0,
-   given length]. If the given subrange is not in the [0, given
-   length] range, then throw IndexOutOfBoundsException.
-   46. equals() and hashCode(): Explain and exemplify how equals()
-   and hashCode() methods work in Java. (MUST READ)
-   47. Immutable objects in a nutshell: Explain and exemplify
-   what is an immutable object in Java.
-   48. Immutable string: Explain why the String class is immutable.
-   49. Writing an immutable class: Write a program that represents
-   an immutable class.
-   50. Passing/returning mutable objects to/from an
-   immutable class: Write a program that passes and returns a
-   mutable object to/from an immutable class.
-   51. Writing an immutable class via the Builder
-   pattern: Write a program that represents an implementation of
-   the Builder pattern in an immutable class.
-   52. Avoiding bad data in immutable objects: Write a program
-   that prevents bad data in immutable objects.
-   53. Cloning objects: Write a program that exemplifies shallow and
-   deep cloning techniques.
-   54. Overriding toString(): Explain and exemplify practices for
-   overriding toString().
-   55. switch expressions: Provide a brief overview of the switch
-   expressions in JDK 12.
-   56. Multiple case labels: Write a snippet of code for exemplifying
-   the JDK 12 switch with multiple case labels.
-   57. Statement blocks: Write a snippet of code for exemplifying the
-   JDK 12 switch with case labels that point to a curly-braced block.
+   40. Checking null references in functional style and imperative code:<br> 
+   Write a program that performs the null checks on the given references in a functional style and imperative code.<br>
+   41. Checking null references and throwing a customized NullPointerException error: <br>
+   Write a program that performs the null checks on the given references and throws NullPointerException with custom messages.<br>
+   42. Checking null references and throwing the specified exception (example, IllegalArgumentException):<br>
+   Write a program that performs the null checks on the given references and throws the specified exception.<br>
+   43. Checking null references and returning non-null default references: <br>
+   Write a program that performs the null checks on the given reference, and if it is non-null, then return it; <br>
+   otherwise, return a non-null default reference.<br>
+   44. Checking the index in the range from 0 to length: <br>
+   Write a program that checks whether the given index is between 0 (inclusive) and the given length (exclusive). <br>
+   If the given index is out of the [0, given length] range, then  throw IndexOutOfBoundsException.<br>
+   45. Checking the subrange in the range from 0 to length: <br>
+   Write a program that checks whether the given subrange [given start, given end] is within the bounds of the range from [0,
+   given length]. <br>
+   If the given subrange is not in the [0, given length] range, then throw IndexOutOfBoundsException.<br>
+   46. equals() and hashCode(): Explain and exemplify how equals() and hashCode() methods work in Java. (MUST READ) <br>
+   47. Immutable objects in a nutshell: Explain and exemplify what is an immutable object in Java. <br>
+   48. Immutable string: Explain why the String class is immutable. <br>
+   49. Writing an immutable class: Write a program that representsan immutable class. <br>
+   50. Passing/returning mutable objects to/from an immutable class: <br>
+   Write a program that passes and returns a mutable object to/from an immutable class.<br>
+   51. Writing an immutable class via the Builder pattern: <br> 
+   Write a program that represents an implementation of the Builder pattern in an immutable class. <br>
+   52. Avoiding bad data in immutable objects: Write a program that prevents bad data in immutable objects.<br>
+   53. Cloning objects: Write a program that exemplifies shallow and deep cloning techniques.<br>
+   54. Overriding toString(): Explain and exemplify practices for overriding toString(). <br>
+   55. Switch Expressions: Provide a brief overview of the switch expressions in JDK 12. <br>
+   56. Multiple case labels: Write a snippet of code for exemplifying the JDK 12 switch with multiple case labels.<br>
+   57. Statement blocks: Write a snippet of code for exemplifying the JDK 12 switch with case labels that point to a curly-braced block.<br>
 **3. Working with Date and Time**<br>
 **4. Type Inference**<br>
 **5. Arrays, Collections, and Data Structures**<br>
