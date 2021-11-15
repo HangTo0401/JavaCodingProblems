@@ -61,6 +61,83 @@ public class StringConstantPoolOrCachedPool {
      * by explicitly calling the String.intern() method as x.intern().
      * */
 
+    /**
+     * Advantages String Immutability:
+     * 1. Security aspect
+     * Commonly, a lot of sensitive information
+     * (usernames, passwords, URLs, ports, databases,
+     * socket connections, parameters, properties, and so on)
+     * are represented and passed around as strings.
+     *
+     * 2. Thread safety
+     * By having this information immutable, the code
+     * becomes secure to a wide range of security threats
+     * (for example, modifying the references accidentally or deliberately).
+     *
+     * Imagine an application using thousands of mutable String objects and
+     * dealing with thread-safety code. Fortunately, in this case, our imagined
+     * scenario will not become a reality, thanks to immutability. Any immutable
+     * object is thread-safe by its nature. This means that strings can be shared and
+     * manipulated by multiple threads, with no risk of corruption and
+     * inconsistency
+     *
+     * 3. Hash code caching
+     * The equals() and hashCode() section discussed equals() and hashCode().
+     * Hash codes should be calculated every time they are involved in hashing
+     * specific activities (for example, searching an element in a collection). Since
+     * String is immutable, every string has an immutable hash code that can be
+     * cached and reused as it cannot be changed after string creation. This means
+     * that hash codes of strings can be used from the cache instead of recalculating
+     * them at each usage. For example, HashMap hashes its keys for different
+     * operations (for example, put(), get()), and if these keys are of
+     * the String type, then hash codes will be reused from the cache instead of
+     * recalculating them.
+     *
+     * 4. Class Loading
+     * A typical approach for loading a class in memory relies on calling
+     * the Class.forName(String className) method. Notice the String argument
+     * representing the class name. Thanks to string immutability, the class name
+     * cannot be changed during the loading process.
+     *
+     * However, if String is mutable, then imagine loading class A
+     * (for example, Class.forName("A")),
+     * and, during the loading process, its name will get changed to BadA.
+     * Now, the BadA objects can do bad things!
+     * */
+
+    /**
+     * Disadvantages of String Immutability:
+     * 1. String cannot be extended
+     * An immutable class should be declared final to avoid extensibility.
+     * However, developers need to extend the String class
+     * in order to add more features,
+     * and this limitation can be considered a drawback of immutability.
+     * Nevertheless, developers can write utility classes
+     * (for example, Apache Commons Lang, StringUtils, Spring Framework, StringUtils, Guava, and
+     * strings)
+     * to provide extra features and simply pass strings
+     * as arguments to the methods of these classes
+     *
+     * 2. Sensitive data in memory for a long time
+     * Sensitive data in strings (for example, passwords) may reside in memory
+     * (in SCP) for a long time.
+     * Being a cache, the SCP takes advantage of special
+     * treatment from the garbage collector.
+     * More precisely, the SCP is not visited by the garbage collector
+     * with the same frequency (cycles) as other memory zones.
+     *
+     * As a consequence of this special treatment, sensitive data is kept in
+     * the SCP for a long time, and can be prone to unwanted usages.
+     * In order to avoid this potential drawback, it is advisable to store sensitive
+     * data (for example, passwords) in char[] instead of String.
+     *
+     * 3. OutOfMemoryError
+     * The SCP is a small memory zone in comparison with others
+     * and can be filled pretty quickly.
+     * Storing too many string literals in the SCP will lead to
+     * OutOfMemoryError.
+     * */
+
     public static void main(String[] args) {
         StringConstantPoolOrCachedPool solution = new StringConstantPoolOrCachedPool();
     }
