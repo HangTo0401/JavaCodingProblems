@@ -73,6 +73,8 @@ public class WritingImmutableClassViaBuilderPattern {
             this.password = password;
             this.created = new Date();
         }
+
+        // Setter methods
         public UserBuilder firstName(String firstname) {
             this.firstname = firstname;
             return this;
@@ -85,6 +87,8 @@ public class WritingImmutableClassViaBuilderPattern {
             this.email = email;
             return this;
         }
+
+        // Generate the immutable object which is UserBuilder
         public WritingImmutableClassViaBuilderPattern build() {
             return new WritingImmutableClassViaBuilderPattern(this);
         }
