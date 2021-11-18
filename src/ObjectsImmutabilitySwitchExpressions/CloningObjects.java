@@ -1,5 +1,9 @@
 package ObjectsImmutabilitySwitchExpressions;
+import com.google.gson.Gson;
 import com.rits.cloning.Cloner;
+import org.apache.commons.lang3.SerializationUtils;
+
+import java.io.*;
 
 class Radius implements Cloneable {
     private int start;
@@ -32,8 +36,7 @@ class Radius implements Cloneable {
     }
 }
 
-
-public class CloningObjects implements Cloneable {
+public class CloningObjects implements Cloneable, Serializable {
     /**
      * 53. Cloning objects
      * Cloning objects is not a daily task, but it is important to do it properly.
@@ -179,6 +182,63 @@ public class CloningObjects implements Cloneable {
         this.radius = radius;
     }
 
+    /**
+     * 5A. The fifth solution use Serialization
+     * This technique requires serializable objects
+     * (implement java.io.Serializable).
+     *
+     * Basically, the object is serialized (writeObject()) and
+     * deserialized (readObject()) in a new object.
+     * A helper method able to accomplish this is listed as follows.
+     *
+     * So, the object is serialized in ObjectOutputStream
+     * and deserialized in ObjectInputStream.
+     * */
+    private static <T> T cloneThroughSerialization(T object){
+        try {
+            // Creating Serialized object
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
+            objectOutputStream.writeObject(object);
+
+            // Creating Deserialized object
+            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+            ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
+
+            return (T) objectInputStream.readObject();
+        } catch (IOException | ClassNotFoundException ex) {
+            // log exception
+            return object;
+        }
+    }
+
+    /**
+     * 5B. Another fifth solution use built-in SerializationUtils
+     * A built-in solution based on serialization is provided by Apache Commons
+     * Lang, via SerializationUtils.
+     * Among its methods, this class provides a method named clone()
+     * that can be used as follows:
+     *
+     * When using serialization, all the involved classes should implement java.io.Serializable interface,
+     * else a java.io.NotSerializableException will be thrown.
+     * */
+
+    /**
+     * 6. The sixth solution use JSON
+     * Almost any JSON library in Java can serialize any Plain Old Java Object
+     * (POJO) without any extra configuration/mapping required.
+     *
+     * Having a JSON library in the project (and many projects have) can save us from adding an
+     * extra library to provide deep cloning.
+     * Mainly, the solution can leverage the existing JSON library to get the same effect.
+     * The following is an example using the Gson library:
+     * */
+    private static <T> T cloneThroughJSON(T object) {
+        Gson gson = new Gson();
+        String json = gson.toJson(object);
+        return (T) gson.fromJson(json, object.getClass());
+    }
+
     public static void main(String[] args) throws CloneNotSupportedException {
         System.out.println("ORIGINAL OBJECT IN MANUAL CLONING");
         CloningObjects point = new CloningObjects(20.0, 50.0);
@@ -232,26 +292,56 @@ public class CloningObjects implements Cloneable {
         // C3 Creating a clone object using Copy constructor
         System.out.println("ORIGINAL OBJECT USING COPY CONSTRUCTOR");
         CloningObjects originalObject = new CloningObjects(20.0, 50.0);
-        System.out.println(point.getX());
-        System.out.println(point.getY());
+        System.out.println(originalObject.getX());
+        System.out.println(originalObject.getY());
 
         System.out.println("CLONE OBJECT USING COPY CONSTRUCTOR");
         CloningObjects cloneObjectUsingCopyConstructor = new CloningObjects(originalObject);
         System.out.println(cloneObjectUsingCopyConstructor.getX());
         System.out.println(cloneObjectUsingCopyConstructor.getY());
+        System.out.println("================================");
 
         // C4 Creating a clone object using Cloning Library
         System.out.println("ORIGINAL OBJECT USING CLONING LIBRARY");
         CloningObjects original = new CloningObjects(20.0, 50.0);
-        System.out.println(point.getX());
-        System.out.println(point.getY());
+        System.out.println(original.getX());
+        System.out.println(original.getY());
 
         System.out.println("CLONE OBJECT USING CLONING LIBRARY");
         Cloner cloner = new Cloner();//Init Cloner in Cloning Library
         CloningObjects cloneDeepCopy = cloner.deepClone(original);
         System.out.println(cloneDeepCopy.getX());
         System.out.println(cloneDeepCopy.getY());
+        System.out.println("================================");
 
-        // C5 Creating a clone object using Serialization
+        // C5A Creating a clone object using Serialization
+        System.out.println("ORIGINAL OBJECT USING SERIALIZATION");
+        CloningObjects originality = new CloningObjects(20.0, 50.0);
+        System.out.println(originality.getX());
+        System.out.println(originality.getY());
+
+        System.out.println("CLONE OBJECT USING SERIALIZATION");
+        CloningObjects cloningObjectUsingSerialization = cloneThroughSerialization(originality);
+        System.out.println(cloningObjectUsingSerialization.getX());
+        System.out.println(cloningObjectUsingSerialization.getY());
+
+        // C5B Also we can use SerializationUtils
+        System.out.println("CLONE OBJECT USING SERIALIZATION UTILS");
+        // To use SerializationUtils, the class have to implements Serializable Interface
+        CloningObjects cloningObjectUsingSerializationUtils = SerializationUtils.clone(originality);
+        System.out.println(cloningObjectUsingSerializationUtils.getX());
+        System.out.println(cloningObjectUsingSerializationUtils.getY());
+        System.out.println("================================");
+
+        // C6 Creating a clone object using JSON
+        System.out.println("ORIGINAL OBJECT USING SERIALIZATION UTILS");
+        CloningObjects originalization = new CloningObjects(20.0, 50.0);
+        System.out.println(originality.getX());
+        System.out.println(originality.getY());
+        
+        System.out.println("CLONE OBJECT USING SERIALIZATION UTILS");
+        CloningObjects clone = cloneThroughJSON(originalization);
+        System.out.println(clone.getX());
+        System.out.println(clone.getY());
     }
 }
