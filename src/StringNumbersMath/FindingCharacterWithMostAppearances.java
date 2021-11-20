@@ -14,7 +14,7 @@ public class FindingCharacterWithMostAppearances {
 
     /**
      * String Manipulation
-     * 1.14 Finding the character with the most appearances
+     * 14. Finding the character with the most appearances
      *
      * SOLUTIONS: There are 3 solutions to this problem
      * */

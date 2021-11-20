@@ -4,7 +4,7 @@ public class DeclaringMultilineStrings {
 
     /**
      * String Manipulation
-     * 1.19 Declaring Multiline Strings (text blocks)
+     * 19. Declaring Multiline Strings (text blocks)
      *
      * SOLUTIONS: There are 4 solutions to this problem
      *

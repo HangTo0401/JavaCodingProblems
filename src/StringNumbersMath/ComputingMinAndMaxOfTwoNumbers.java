@@ -5,7 +5,7 @@ import java.util.function.BinaryOperator;
 public class ComputingMinAndMaxOfTwoNumbers {
     /**
      * String Manipulation
-     * 1.25 Computing the minimum and maximum of two numbers
+     * 25. Computing the minimum and maximum of two numbers
      *
      * SOLUTIONS: There are 3 solutions to this problem
      * */

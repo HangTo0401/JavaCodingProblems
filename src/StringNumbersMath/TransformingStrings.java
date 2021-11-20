@@ -5,11 +5,13 @@ import java.util.stream.Stream;
 public class TransformingStrings {
     /**
      * String Manipulation
-     * 1.24 Transforming Strings
+     * 24. Transforming Strings
      * Let's assume that we have a string and we want to transform it into another
      * string (for example, transform it into upper case).
      *
      * SOLUTIONS: There are 2 solutions to this problem
+     * While map() is more general, transform() is dedicated to applying a function
+     * to a string and returns the resulting string
      * */
 
     /**

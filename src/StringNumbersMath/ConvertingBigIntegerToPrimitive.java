@@ -6,7 +6,7 @@ public class ConvertingBigIntegerToPrimitive {
 
     /**
      * Math Manipulation
-     * 1.33 Converting BigInteger into a primitive type
+     * 33. Converting BigInteger into a primitive type
      * SOLUTIONS: There is 1 solution to this problem:
      *
      * The BigInteger class is a very handy tool for representing immutable

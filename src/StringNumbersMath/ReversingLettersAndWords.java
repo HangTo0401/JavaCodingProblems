@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class ReversingLettersAndWords {
     /**
      * String Manipulation
-     * 1.3 Reversing Letters And Words
+     * 3. Reversing Letters And Words
      *
      * SOLUTION: There are 2 solutions to this problem
      * */

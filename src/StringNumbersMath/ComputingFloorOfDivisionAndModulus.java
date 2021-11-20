@@ -4,7 +4,7 @@ public class ComputingFloorOfDivisionAndModulus {
 
     /**
      * Math Manipulation
-     * 1.35 Computing the floor of a division and modulus
+     * 35. Computing the floor of a division and modulus
      *
      * SOLUTIONS: There are 2 solutions to this problem
      * The floor of a division for two integers that have

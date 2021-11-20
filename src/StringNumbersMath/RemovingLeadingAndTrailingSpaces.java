@@ -3,7 +3,7 @@ package StringNumbersMath;
 public class RemovingLeadingAndTrailingSpaces {
     /**
      * String Manipulation
-     * 1.21 Removing leading and trailing spaces
+     * 21. Removing leading and trailing spaces
      *
      * SOLUTIONS: There are 2 solutions to this problem
      * */

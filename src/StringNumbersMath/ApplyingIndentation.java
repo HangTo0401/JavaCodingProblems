@@ -7,7 +7,7 @@ public class ApplyingIndentation {
 
     /**
      * String Manipulation
-     * 1.23 Applying Indentation
+     * 23. Applying Indentation
      *
      * SOLUTIONS: There are 3 solutions to this problem
      *

@@ -9,7 +9,7 @@ public class GeneratingAllPermutations {
     /**
      * String Manipulation
      * MUST READ PROBLEM
-     * 1.10 Generating All Permutations
+     * 10. Generating All Permutations
      *
      * SOLUTIONS: There are 3 solutions to this problem
      *

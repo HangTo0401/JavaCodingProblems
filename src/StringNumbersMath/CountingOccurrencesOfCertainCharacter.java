@@ -4,7 +4,7 @@ public class CountingOccurrencesOfCertainCharacter {
 
     /**
      * String Manipulation
-     * 1.6 Counting Occurrences Of A Certain Character
+     * 6. Counting Occurrences Of A Certain Character
      *
      * SOLUTION: There are 4 solutions to this problem
      */

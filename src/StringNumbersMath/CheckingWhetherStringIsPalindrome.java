@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 public class CheckingWhetherStringIsPalindrome {
     /**
      * String Manipulation
-     * 1.11 Checking Whether String Is Palindrome
+     * 11. Checking Whether String Is Palindrome
      *
      * A palindrome (whether a string or a number) looks
      * unchanged when it's reversed.

@@ -9,7 +9,7 @@ public class CountingDuplicateCharacters {
 
     /**
      * String Manipulation
-     * 1.1 Counting Duplicate Characters
+     * 1. Counting Duplicate Characters
      * Write a program that counts duplicate characters from a given string.
      *
      * SOLUTION: There are 3 solutions to this problem

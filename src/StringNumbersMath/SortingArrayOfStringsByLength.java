@@ -7,7 +7,7 @@ public class SortingArrayOfStringsByLength {
 
     /**
      * String Manipulation
-     * 1.15 Sorting Array Of Strings By Length
+     * 15. Sorting Array Of Strings By Length
      *
      * SOLUTIONS: There are 3 solutions to this problem
      * */

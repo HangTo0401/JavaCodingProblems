@@ -6,7 +6,7 @@ public class CheckingStringContainsSubstring {
 
     /**
      * String Manipulation
-     * 1.15 Checking that a string contains a substring
+     * 15. Checking that a string contains a substring
      *
      * SOLUTIONS: There are 3 solutions to this problem
      * */

@@ -4,7 +4,7 @@ public class FiniteFloatingPointValue {
 
     /**
      * Math Manipulation
-     * 1.31 Double/float is a finite floating-point value
+     * 31. Double/float is a finite floating-point value
      *
      * SOLUTIONS: There is 2 solutions to this problem
      * The problem arises from the fact that some floating-point methods

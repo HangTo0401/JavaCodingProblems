@@ -3,7 +3,7 @@ package StringNumbersMath;
 public class ConvertingLongIntoInt {
     /**
      * Math Manipulation
-     * 1.34 Converting long into int
+     * 34. Converting long into int
      *
      * SOLUTIONS: There are 3 solutions to this problem
      * */

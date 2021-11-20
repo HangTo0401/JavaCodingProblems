@@ -5,7 +5,7 @@ import java.util.function.BinaryOperator;
 public class MultiplyingTwoLargeNumsAndOperationOverflow {
     /**
      * Math Manipulation
-     * 1.37 Multiplying two large int/long values and operation overflow
+     * 37. Multiplying two large int/long values and operation overflow
      *
      * SOLUTIONS: There are 6 solutions to this problem
      *

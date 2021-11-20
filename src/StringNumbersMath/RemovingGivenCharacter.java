@@ -6,7 +6,7 @@ public class RemovingGivenCharacter {
 
     /**
      * String Manipulation
-     * 1.13 Removing a given character
+     * 13. Removing a given character
      *
      * SOLUTIONS: There are 4 solutions to this problem
      * */

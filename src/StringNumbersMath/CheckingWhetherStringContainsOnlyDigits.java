@@ -4,7 +4,7 @@ public class CheckingWhetherStringContainsOnlyDigits {
 
     /**
      * String Manipulation
-     * 1.4  Checking whether a string contains only digits
+     * 4.  Checking whether a string contains only digits
      *
      * SOLUTION: There are 2 solutions to this problem
      *

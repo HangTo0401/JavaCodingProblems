@@ -3,7 +3,7 @@ package StringNumbersMath;
 public class FusedMultiplyAdd {
     /**
      * Math Manipulation
-     * 1.38 Fused Multiply Add
+     * 38. Fused Multiply Add
      *
      * SOLUTIONS: There are 2 solutions to this problem
      * The mathematical computation (a * b) + c is heavily exploited in matrix

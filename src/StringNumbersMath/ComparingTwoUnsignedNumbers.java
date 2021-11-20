@@ -3,7 +3,8 @@ package StringNumbersMath;
 public class ComparingTwoUnsignedNumbers {
 
     /**
-     * 1.29 Comparing two unsigned numbers
+     * Math Manipulation
+     * 29. Comparing two unsigned numbers
      *
      * Let's consider two signed integers, Integer.MIN_VALUE (-2,147,483,648)
      * and Integer.MAX_VALUE (2,147,483,647).

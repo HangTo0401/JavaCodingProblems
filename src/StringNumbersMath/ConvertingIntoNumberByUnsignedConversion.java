@@ -4,7 +4,7 @@ public class ConvertingIntoNumberByUnsignedConversion {
 
     /**
      * String Manipulation
-     * 1.28 Converting into a number by an unsigned conversion
+     * 28. Converting into a number by an unsigned conversion
      *
      * The problem requires that we convert the given signed int into long via an
      * unsigned conversion.

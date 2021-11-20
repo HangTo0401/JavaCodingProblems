@@ -4,8 +4,7 @@ public class StringAsUnsignedNumberInRadix {
 
     /**
      * String Manipulation
-     *
-     * 1.27 String as an unsigned number in the radix
+     * 27. String as an unsigned number in the radix
      *
      * The support for unsigned arithmetic was added to Java8.
      * The Byte, Short, Integer, and Long classes

@@ -4,7 +4,7 @@ public class DivisionAndModuloUnsignedValues {
 
     /**
      * Math Manipulation
-     * 1.30 Division and modulo of unsigned values
+     * 30. Division and modulo of unsigned values
      * SOLUTIONS: There is 1 solution to this problem
      *
      * Let's consider the Integer.MIN_VALUE

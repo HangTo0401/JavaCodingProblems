@@ -7,7 +7,7 @@ public class CountingSubstringOccurrencesInString {
 
     /**
      * String Manipulation
-     * 1.17 Counting Substring Occurrences In A String
+     * 17. Counting Substring Occurrences In A String
      *
      * Counting the number of occurrences of a string in another string is a
      * problem that can have at least two interpretations:

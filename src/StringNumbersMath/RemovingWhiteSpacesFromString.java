@@ -4,7 +4,7 @@ public class RemovingWhiteSpacesFromString {
 
     /**
      * String Manipulation
-     * 1.8 Removing White Spaces From A String
+     * 8. Removing White Spaces From A String
      *
      * SOLUTIONS: There is 1 solution to this problem
      *

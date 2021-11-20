@@ -6,7 +6,7 @@ public class FindingLongestCommonPrefix {
 
     /**
      * String Manipulation
-     * 1.22 Finding The Longest Common Prefix
+     * 22. Finding The Longest Common Prefix
      *
      * SOLUTIONS: There are 7 solutions to this problem
      *

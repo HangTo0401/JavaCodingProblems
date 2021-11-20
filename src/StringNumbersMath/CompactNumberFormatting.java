@@ -7,7 +7,7 @@ import java.util.Locale;
 public class CompactNumberFormatting {
     /**
      * Math Manipulation
-     * 1.39 Compact Number Formatting
+     * 39. Compact Number Formatting
      *
      * SOLUTIONS: There is 1 solution to this problem
      * */
@@ -33,6 +33,8 @@ public class CompactNumberFormatting {
     public static String forLocale(Locale locale, double number) {
         return format(locale, Style.SHORT, null, number);
     }
+
+
 
     public static String forLocaleStyle(
             Locale locale, Style style, double number) {

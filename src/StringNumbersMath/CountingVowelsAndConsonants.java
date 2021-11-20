@@ -14,7 +14,7 @@ public class CountingVowelsAndConsonants {
 
     /**
      * String Manipulation
-     * 1.5  Counting Vowels And Consonants
+     * 5.  Counting Vowels And Consonants
      *
      * SOLUTION: There are 2 solutions to this problem
      */

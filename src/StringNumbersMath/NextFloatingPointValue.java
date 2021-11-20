@@ -3,7 +3,7 @@ package StringNumbersMath;
 public class NextFloatingPointValue {
     /**
      * Math Manipulation
-     * 1.36 Next floating-point value
+     * 36. Next floating-point value
      *
      * SOLUTIONS: There are 2 solutions to this problem
      * */

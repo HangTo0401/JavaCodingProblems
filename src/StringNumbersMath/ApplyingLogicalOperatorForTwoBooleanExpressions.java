@@ -3,7 +3,7 @@ package StringNumbersMath;
 public class ApplyingLogicalOperatorForTwoBooleanExpressions {
     /**
      * Math Manipulation
-     * 1.31 Applying logical AND/OR/XOR to two boolean expressions
+     * 31. Applying logical AND/OR/XOR to two boolean expressions
      *
      * SOLUTIONS: There is 1 solution to this problem
      * The truth table of elementary logic operations (AND, OR, and XOR) looks

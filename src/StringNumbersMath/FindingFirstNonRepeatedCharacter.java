@@ -8,7 +8,7 @@ public class FindingFirstNonRepeatedCharacter {
 
     /**
      * String Manipulation
-     * 1.2 Finding the first non-repeated character in a string
+     * 2. Finding the first non-repeated character in a string
      *
      * SOLUTION: There are 3 solutions to this problem
      *

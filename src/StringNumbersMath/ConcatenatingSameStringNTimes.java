@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 public class ConcatenatingSameStringNTimes {
     /**
      * String Manipulation
-     * 1.20 Concatenating Same String N Times
+     * 20. Concatenating Same String N Times
      *
      * SOLUTIONS: There are 6 solutions to this problem
      * */

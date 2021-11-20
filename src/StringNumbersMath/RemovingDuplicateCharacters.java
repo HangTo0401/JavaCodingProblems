@@ -9,7 +9,7 @@ public class RemovingDuplicateCharacters {
 
     /**
      * String Manipulation
-     * 1.12 Removing Duplicate Characters
+     * 12. Removing Duplicate Characters
      *
      * SOLUTIONS: There are 3 solutions to this problem
      * */

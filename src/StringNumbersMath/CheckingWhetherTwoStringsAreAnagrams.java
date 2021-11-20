@@ -3,7 +3,7 @@ package StringNumbersMath;
 public class CheckingWhetherTwoStringsAreAnagrams {
     /**
      * String Manipulation
-     * 1.18 Checking Whether Two Strings Are Anagrams
+     * 18. Checking Whether Two Strings Are Anagrams
      *
      * Two strings that have the same characters,
      * but that are in a different order are anagrams.

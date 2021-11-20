@@ -6,7 +6,7 @@ public class SummingTwoLargeNumbers {
 
     /**
      * Math Manipulation
-     * 1.26 Summing two large int/long values
+     * 26. Summing two large int/long values
      * and operation overflow
      *
      * SOLUTIONS: There are 2 solution to this problem
