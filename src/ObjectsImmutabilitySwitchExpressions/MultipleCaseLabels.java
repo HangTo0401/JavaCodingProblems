@@ -26,11 +26,20 @@ public class MultipleCaseLabels {
      * So, if we pass to this method TENNIS, GOLF, or SNOOKER, it will return an
      * instance of the Individual class.
      * If we pass FOOTBALL or VOLLEY, it will return an instance of the Team class
+     *
+     * SOLUTIONS: There is 1 solution to this problem
      * */
     private static SportType fetchSportTypeByPlayerType(String playerType) {
         return switch (playerType) {
             case "TENNIS", "GOLF", "SNOOKER" -> new Individual();
             case "FOOTBALL", "VOLLEY" -> new Team();
         };
+    }
+
+    public static void main(String[] args) {
+        MultipleCaseLabels multipleCaseLabels = new MultipleCaseLabels();
+
+        // C1
+        multipleCaseLabels.fetchSportTypeByPlayerType("TENNIS");
     }
 }
