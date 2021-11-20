@@ -30,6 +30,8 @@ public class SwitchExpressions {
     private static PlayerTypes UNKNOWN;
 
     /**
+     * Objects Immutability Switch Expressions
+     * 55. Switch Expressions
      *
      * Before we have a brief overview of the switch expressions introduced in JDK
      * 12, let's see a typical old-school example wrapped in a method
