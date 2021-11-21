@@ -12,6 +12,8 @@ public class DefiningPeriodUsingDateBasedValuesAndDurationUsingTimeBasedValues {
      * JDK 8 comes with two new classes,
      * named java.time.Period and java.time.Duration.
      * Let's take a detailed look at them in the next sections.
+     *
+     * SOLUTIONS: There is 2 solution to this problem
      * */
 
     /**
