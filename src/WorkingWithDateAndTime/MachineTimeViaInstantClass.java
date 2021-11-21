@@ -1,9 +1,6 @@
 package WorkingWithDateAndTime;
 
-import java.time.Clock;
-import java.time.Instant;
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
 
 public class MachineTimeViaInstantClass {
@@ -29,7 +26,7 @@ public class MachineTimeViaInstantClass {
      * */
 
     /**
-     * Converting String to Instant
+     * 1. Converting String to Instant
      * Calling Instant.toString() produces an output that follows the ISO-8601 standard
      * for representing date and time.
      *
@@ -43,10 +40,8 @@ public class MachineTimeViaInstantClass {
         System.out.println(timeStampFromString);
     }
 
-
-
     /**
-     * Adding or subtracting time to/from Instant
+     * 2. Adding or subtracting time to/from Instant
      * For adding time, Instant has a plus() methods.
      *
      * Beside the plus() method, Instant also contains
@@ -68,7 +63,7 @@ public class MachineTimeViaInstantClass {
     }
 
     /**
-     * Comparing Instant objects
+     * 3. Comparing Instant objects
      * Comparing two Instant objects can be accomplished via the
      * Instant.isAfter() and Instant.isBefore() methods.
      * For example, let's look at the following two Instant objects:
@@ -91,10 +86,58 @@ public class MachineTimeViaInstantClass {
         System.out.println(difference);
     }
 
+    /**
+     * 4A. Converting between Instant and LocalDateTime, ZonedDateTime, and OffsetDateTime
+     * These common conversions can be accomplished as in the following examples:
+     * Convert between Instant and LocalDateTime—since LocalDateTime
+     * has no idea of time zone, use a zero offset UTC+0:
+     * */
+    public void convertInstantToLocalDateTime() {
+        // 2019-02-24T15:27:13.990103700
+        LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.now(), ZoneOffset.UTC);
+        System.out.println(localDateTime);
+
+        // 2019-02-24T17:27:14.013105Z
+        Instant instantLDT = LocalDateTime.now().toInstant(ZoneOffset.UTC);
+        System.out.println(instantLDT);
+    }
+
+    /**
+     * 4B. Converting between Instant and LocalDateTime, ZonedDateTime, and OffsetDateTime
+     * These common conversions can be accomplished as in the following examples:
+     * Convert between Instant and ZonedDateTime—convert an Instant
+     * UTC+0 to a Paris ZonedDateTime UTC+1:
+     * */
+    public void convertInstantToZonedDateTime() {
+        // 2019-02-24T16:34:36.138393100+01:00[Europe/Paris]
+        ZonedDateTime zdt = Instant.now().atZone(ZoneId.of("Europe/Paris"));
+        System.out.println(zdt);
+
+        // 2019-02-24T16:34:36.150393800Z
+        Instant instantZDT = LocalDateTime.now().atZone(ZoneId.of("Europe/Paris")).toInstant();
+        System.out.println(instantZDT);
+    }
+
+    /**
+     * 4C. Converting between Instant and LocalDateTime, ZonedDateTime, and OffsetDateTime
+     * These common conversions can be accomplished as in the following examples:
+     * Convert between Instant and OffsetDateTime—specify an offset of
+     * 2 hours:
+     * */
+    public void convertInstantToOffsetDateTime() {
+        // 2019-02-24T17:34:36.151393900+02:00
+        OffsetDateTime odt = Instant.now().atOffset(ZoneOffset.of("+02:00"));
+        System.out.println(odt);
+
+        // 2019-02-24T15:34:36.153394Z
+        Instant instantODT = LocalDateTime.now().atOffset(ZoneOffset.of("+02:00")).toInstant();
+        System.out.println(instantODT);
+    }
+
     public static void main(String[] args) {
         MachineTimeViaInstantClass machineTimeViaInstantClass = new MachineTimeViaInstantClass();
 
-        /* Using java.time.Instant to work with time */
+        /* 1. Using java.time.Instant to work with time */
         // 2019-02-24T15:05:21.781049600Z
         Instant now = Instant.now();
         System.out.println(now);
@@ -107,11 +150,20 @@ public class MachineTimeViaInstantClass {
         Clock clock = Clock.systemUTC();
         System.out.println(clock);
 
-        /* Adding or subtracting time to/from Instant */
+        /* 2. Adding or subtracting time to/from Instant */
         machineTimeViaInstantClass.setTimeStampFromString();
         machineTimeViaInstantClass.addOrSubtractTimeFromInstant();
 
-        /* Comparing Instant Objects */
+        /* 3. Comparing Instant Objects */
         machineTimeViaInstantClass.compareInstantObjects();
+
+        /* 4A. Convert Instant To LocalDateTime */
+        machineTimeViaInstantClass.convertInstantToLocalDateTime();
+
+        /* 4B. Convert Instant To ZonedDateTime */
+        machineTimeViaInstantClass.convertInstantToZonedDateTime();
+
+        /* 4C. Convert Instant To OffsetDateTime */
+        machineTimeViaInstantClass.convertInstantToOffsetDateTime();
     }
 }
